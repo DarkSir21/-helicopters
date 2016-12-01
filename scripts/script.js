@@ -12,4 +12,19 @@ $(document).ready(function() {
         $(this).find('.wrapper').css('min-height', '');
       })
   });
+
+  var $asideSlider = $('.aside-slider-wrap');
+
+  $asideSlider.owlCarousel({
+    items: 1,
+    loop: true
+  });
+
+  $('.aside-slider-left').click(function() {
+      $asideSlider.trigger('prev.owl.carousel');
+  })
+
+  $('.aside-slider-right').click(function() {
+      $asideSlider.trigger('next.owl.carousel');
+  })
 });

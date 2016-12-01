@@ -1149,6 +1149,10 @@ header {
     padding: 0.3rem 0.4rem 0.4rem; }
   .btn > .count {
     font-weight: 600; }
+  .btn.-disabled > .icon {
+    background: #b9b9b9; }
+  .btn.-disabled > .link {
+    background: #eff3f6; }
 
 .section {
   padding-bottom: 2rem; }
@@ -1497,41 +1501,69 @@ header {
   color: #ff465a; }
 
 .aside-slider {
+  position: relative;
   margin-top: 1.4rem;
   background: #ffd000; }
   .aside-slider > .btns {
     display: flex; }
-  .aside-slider > .title {
-    font-family: 'IntroBoldCaps';
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.9rem;
-    padding-top: 2rem;
-    margin-bottom: 1rem; }
-  .aside-slider > .sub-title {
-    text-align: center;
-    margin-bottom: 1.4rem; }
-  .aside-slider > .image {
-    position: relative; }
-  .aside-slider > .image > img {
-    display: block;
-    padding: 5px;
-    max-width: 100%; }
-  .aside-slider > .image > .prices {
+  .aside-slider > .btns > .btn,
+  .aside-slider > .btns > .btn > .link {
+    flex: 1; }
+  .aside-slider .aside-slider-left,
+  .aside-slider .aside-slider-right {
+    z-index: 10;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    text-align: left; }
-  .aside-slider > .image > .prices > .sale {
-    display: inline-block;
-    padding: 0.4rem 0.6rem;
-    background: #fff; }
-  .aside-slider > .image > .prices > .price {
-    flex-wrap: 600;
-    font-size: 2rem;
-    color: #fff;
-    padding: 1rem 0.7rem;
-    background-color: #ff465a; }
+    top: 15%;
+    background: #7e7470;
+    width: 2.6rem;
+    height: 2.6rem;
+    cursor: pointer; }
+  .aside-slider .aside-slider-left {
+    left: -1.3rem; }
+  .aside-slider .aside-slider-right {
+    right: -1.3rem; }
+
+.aside-slider-wrap .item > .title {
+  font-family: 'IntroBoldCaps';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.9rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem; }
+
+.aside-slider-wrap .item > .sub-title {
+  text-align: center;
+  margin-bottom: 1.4rem; }
+
+.aside-slider-wrap .item > .image {
+  display: inline-table;
+  position: relative;
+  min-height: 370px;
+  background: #fff;
+  margin: 5px; }
+
+.aside-slider-wrap .item > .image > img {
+  display: block;
+  /*padding: 5px;*/
+  max-width: 100%; }
+
+.aside-slider-wrap .item > .image > .prices {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: left; }
+
+.aside-slider-wrap .item > .image > .prices > .sale {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  background: #fff; }
+
+.aside-slider-wrap .item > .image > .prices > .price {
+  flex-wrap: 600;
+  font-size: 2rem;
+  color: #fff;
+  padding: 1rem 0.7rem;
+  background-color: #ff465a; }
 
 .btn-wrap {
   display: flex;

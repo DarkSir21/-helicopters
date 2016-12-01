@@ -96,4 +96,13 @@
     font-weight: 600;
   }
 
+
+  &.-disabled > .icon {
+    background: #b9b9b9;
+  }
+
+  &.-disabled > .link {
+    background: #eff3f6;
+  }
+
 }
