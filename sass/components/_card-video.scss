@@ -1,0 +1,76 @@
+
+.card-video {
+
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  > .item {
+    position: relative;
+  }
+
+  > .item:first-child {
+    z-index: 10;
+  }
+
+  > .item:nth-child(2) {
+    margin-left: -1rem;
+  }
+  
+  > .item:nth-child(2)::before {
+    content: '';
+    background: url('../icons/arrows.jpg') no-repeat;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 70px;
+    height: 72px;
+  }
+
+  > .item:nth-child(n+2) {
+    padding: 0 2rem;
+    border-top: 5px solid $yellow;
+  }
+
+  > .item > .content > .title,
+  > .item > .char > .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  > .item:nth-child(2) > .content > .title {
+    margin-left: 4rem;
+  }
+
+  > .item > .content > .desc {
+    color: #232323;
+  }
+
+  > .item:last-child { 
+    background-color: #eff3f6;
+  }
+
+  > .item > .char > .list {
+    padding: 0;
+    padding-left: 1rem;
+    list-style-type: square;
+  }
+
+  > .item > .char > .list > li {
+    font-weight: 600;
+    color: $red;
+    margin-bottom: 2rem;
+  }
+
+  > .item > .char > .list > li:last-child {
+    margin-bottom: 0;
+  }
+
+  > .item > .char > .list > li > span {
+    color: #000;
+  }
+}

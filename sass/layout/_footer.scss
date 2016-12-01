@@ -1,0 +1,27 @@
+
+footer {
+  padding: 4rem 0;
+  margin-top: 3rem;
+  background: #333 url('../icons/gear_bg.svg') no-repeat center / cover;
+
+  .exemple {
+    margin-top: 1rem;
+    width: 100%;
+    color: #fff;
+  }
+
+  address {
+    font-style: normal;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+
+  .desc {
+    color: #fff;
+  }
+
+  .bd-r { 
+    border-right: 1px solid #fff;
+  }
+}

@@ -1,0 +1,14 @@
+
+.btn-wrap {
+  display: flex;
+  flex-direction: row;
+  padding: 1.1rem;
+
+  > .btn {
+    margin-right: 1.5rem;
+  }
+
+  > .btn:last-child {
+    margin-right: 0;
+  }
+}

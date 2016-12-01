@@ -1,0 +1,32 @@
+
+.main-menu {
+  display: flex;
+  color: $brown;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  > .link {
+    font-family: 'IntroBoldCaps';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid $brown;
+    width: 10rem;
+    background-color: #fff;
+  }
+
+  > .link:last-child {
+    border-right: none;
+  }
+
+  > .link:hover,
+  > .link:focus {
+    color: #fff;
+    background-color: $brown;
+  }
+
+}

@@ -1,0 +1,54 @@
+header.wrap
+  .container-fluid
+    .top-bar.row.middle-xs.between-xs
+      nav.second-menu
+        a(href="#" class="link") О компании
+        a(href="#" class="link") Бренды
+        a(href="#" class="link") Доставка
+        a(href="#" class="link") Информация
+
+      a(href="#").btn
+        .icon.-red-bg
+          include ../static/icons/percentage.svg
+        .link.-yellow-bg.-center Распродажа
+
+      .input-search
+        input(type="text" placeholder="Искать товар по названию").input
+        button.search 
+          include ../static/icons/search.svg
+          | Найти
+
+      a(href="#").btn
+        .icon.-red-bg.-cart
+          include ../static/icons/shopping-cart.svg
+        .link.-yellow-bg.-center
+          .count 2 товара на&nbsp;
+          .price 780 829 .Р
+
+
+  .container-fluid
+    .row.between-xs.middle-xs
+      
+      .logo
+        img(src="images/logo-lg.png", alt="Логотип")
+
+      .top-bar-second
+        nav.main-menu
+          a(href="#").link Каталог
+          a(href="#").link Сравнение
+          a(href="#").link Отзывы
+        
+        .btn-wrap
+          a(href="#").btn
+            .icon.-mr.-flex-center
+              img(src="icons/marks.png")
+            .link.-col.-start
+              .link-item.-lg г. Санкт-Петербург
+              .link-item.-small.-brown.-underline Выбрать город доставки
+
+          a(href="#").btn
+            .icon.-mr.-flex-center
+              img(src="icons/phone.png")
+            .link.-col.-start
+              .link-item.-lg 8 800 775 3106
+              .link-item.-small.-brown.-underline Поможем выбрать | звонок бесплатный

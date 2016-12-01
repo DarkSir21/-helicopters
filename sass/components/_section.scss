@@ -1,0 +1,47 @@
+
+.section {
+  padding-bottom: 2rem;
+
+  &.-bg {
+    background-color: #fff;
+  }
+
+  > .title {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    max-width: 1000px;
+    margin: 2.2rem auto;
+    padding: 1rem 0;
+    background: #fff;
+    background: 
+      linear-gradient(-45deg, transparent 12%, #fff 0)
+      right,
+      linear-gradient(45deg, transparent 12%, #fff 0)
+      left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+  }
+
+  > .title::before,
+  > .title::after {
+    content: '';
+    width: 12%;
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    background: $red;
+  }
+
+  > .title::before {
+    left: 10%;
+    transform: skew(45deg);
+  }
+
+  > .title::after {
+    right: 10%;
+    transform: skew(-45deg);
+  }
+}

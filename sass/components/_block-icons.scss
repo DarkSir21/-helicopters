@@ -1,0 +1,24 @@
+
+.block-icons {
+  margin-top: 1.1rem;
+  padding: 1.8rem 1.2rem;
+  display: flex;
+  border: 5px solid $brown;
+
+  > .item {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+
+  > .item > .icon {
+    height: 50px;
+    text-align: center;
+  }
+
+  > .item > .link {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

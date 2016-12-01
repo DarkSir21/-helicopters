@@ -1,0 +1,164 @@
+
+main
+  section.section.-bg.wrap
+    .container-fluid
+      .row
+        .col-xs-8
+          .card-wrap
+            h1.title <span>БОЛЕЕ 4500 НАИМЕНОВАНИЙ</span> РАДИОУПРАВЛЯЕМЫХ МОДЕЛЕЙИ АКСЕССУАРОВ ДЛЯ НОВИЧКОВ И ПРОФЕССИОНАЛОВ
+            .row
+              - var n = 0;
+                while n < 12
+                  .col-xs-3
+                    .card-hidden
+                      .wrapper
+                        a(href="#").image
+                          img(src="images/helic.jpg")
+                        a(href="#").title.-link Квадрокоптеры
+                        .title.-small 1344 шт
+                        .desc
+                          a(href="#").tag Для новичков
+                          a(href="#").tag Профессиональные
+                          a(href="#").tag С камерой
+                          a(href="#").tag DJI
+                          a(href="#").tag Мультикоптеры
+                          a(href="#").tag Стедикамы
+                      - n++
+
+        .col-xs-4
+          .aside-slider
+              //.btns
+                a(href="#").btn.-normal
+                  .icon.-red-bg
+                    include ../static/icons/percentage.svg
+                  .link.-yellow-bg.-center Лидеры продаж
+                a(href="#").btn.-normal
+                  .icon.-red-bg
+                    include ../static/icons/percentage.svg
+                  .link.-yellow-bg.-center Новинки
+                a(href="#").btn.-normal
+                  .icon.-red-bg
+                    include ../static/icons/percentage.svg
+                  .link.-yellow-bg.-center Спецпредложения
+              .title SYMA X23 m<br>плати за 2 - бери 3
+              .sub-title Акция действует с 18 октября по 31 ноября
+              .image
+                img(src="images/walli.jpg", alt="")
+                .prices
+                  .sale цена <s>205 000</s>
+                  .price 175 000 ₽
+
+          .block-icons
+            .item
+              .icon
+                img(src="../static/icons/delivery.png")
+              a.link(href="#") Доставка<br>от 1 дня
+            .item
+              .icon
+                img(src="../static/icons/tools.png")
+              a.link(href="#") Обязательная<br>проверка
+            .item
+              .icon
+                img(src="../static/icons/payment_delivery.png")
+              a.link(href="#") Оплата<br>при получении
+
+
+        
+
+  section.section.filter
+    h2.title Подбери радиоуправляемую модель
+    .wrapper
+      .wrap
+        .row.center-xs
+          .input.-mar
+            select(name="category").select
+              option(value="0") Категория 1
+              option(value="0") Категория 2
+              option(value="0") Категория 3
+              option(value="0") Категория 4
+          .input.-mar
+            select(name="category2").select
+              option(value="0") Цена: от 0 до 254 000 ₽
+              option(value="0") Категория 2
+              option(value="0") Категория 3
+              option(value="0") Категория 4
+          .input.-mar
+            select(name="category3").select
+              option(value="0") Профессиональный
+              option(value="0") Категория 2
+              option(value="0") Категория 3
+              option(value="0") Категория 4
+
+          label.input.-checkbox.-mar В наличии
+            input(type="checkbox").checkbox
+          
+          button.btn.-submit.-gray Подобрать
+
+  section.section.-bg.wrap
+    .container-fluid
+      .row
+        .col-xs
+          .card-wrap
+            .title-wrap
+              h2.title Посмотрите видеоотзывы наших моделей
+              a(href="#").link Смотреть все видео
+          .card-video.row
+              .item.col-xs-4
+                .video <iframe width="100%" height="260" src="https://www.youtube.com/embed/ZwzY1o_hB5Y" frameborder="0" allowfullscreen></iframe>
+              .item.col-xs-4
+                .content
+                  .title DJI Phantom 3 Proffesional
+                  .desc Решили открыть шиномонтаж в г. Таштагол. Долго искали поставщика – выбор был достаточно большой. Но решили остановиться на компании Центр технического оборудования. Ну, во-первых, по цене сделали действительно хорошее предложение, а во-вторых, очень грамотно проконсультировали. выбор был достаточно большой.
+              .item.col-xs-4
+                .char
+                  .title Характеристики
+                  ul.list
+                    li <span>Моторизированный подвес</span>
+                    li <span>Дополнительный аккумулятор</span>
+                    li <span>Еще одно наименование</span>
+          .card-video.row
+              .item.col-xs-4
+                .video <iframe width="100%" height="260" src="https://www.youtube.com/embed/ZwzY1o_hB5Y" frameborder="0" allowfullscreen></iframe>
+              .item.col-xs-4
+                .content
+                  .title ООО "АвтоРемонтМаркет" г. Таштагол
+                  .desc Решили открыть шиномонтаж в г. Таштагол. Долго искали поставщика – выбор был достаточно большой. Но решили остановиться на компании Центр технического оборудования. Ну, во-первых, по цене сделали действительно хорошее предложение, а во-вторых, очень грамотно проконсультировали. выбор был достаточно большой.
+              .item.col-xs-4
+                .char
+                  .title Характеристики
+                  ul.list
+                    li <span>Моторизированный подвес</span>
+                    li <span>Дополнительный аккумулятор</span>
+                    li <span>Еще одно наименование</span>
+
+  section.section
+    .wrap
+      .row
+        .col-xs-6
+          .text-block
+            .top-wrap
+              .icon
+                img(src="images/gear.jpg")
+              .title ОБОРУДОВАНИЕ ДЛЯ АВТОСЕРВИСА
+            .desc Компания «Мастер-Инструмент» предлагает своим покупателям качественное автосервисное оборудование с оптимальным соотношением цены и качества. Если вы хотите, чтобы ваш сервисный центр приносил прибыль, или же планируете расширение спектра услуг, то стоит купить оборудование для СТО именно здесь: в пользу такого решения говорит и ценовая политика компании, и условия сотрудничества, и подбор оснаще
+        .col-xs-6
+          .text-block
+            .top-wrap
+              .icon
+                img(src="images/comment.jpg")
+              .title ОБОРУДОВАНИЕ ДЛЯ АВТОСЕРВИСА
+            .desc Компания «Мастер-Инструмент» предлагает своим покупателям качественное автосервисное оборудование с оптимальным соотношением цены и качества. Если вы хотите, чтобы ваш сервисный центр приносил прибыль, или же планируете расширение спектра услуг, то стоит купить оборудование для СТО именно здесь: в пользу такого решения говорит и ценовая политика компании, и условия сотрудничества, и подбор оснаще
+        .col-xs-6
+          .text-block
+            .top-wrap
+              .icon
+                img(src="images/factory.jpg")
+              .title ОБОРУДОВАНИЕ ДЛЯ АВТОСЕРВИСА
+            .desc Компания «Мастер-Инструмент» предлагает своим покупателям качественное автосервисное оборудование с оптимальным соотношением цены и качества. Если вы хотите, чтобы ваш сервисный центр приносил прибыль, или же планируете расширение спектра услуг, то стоит купить оборудование для СТО именно здесь: в пользу такого решения говорит и ценовая политика компании, и условия сотрудничества, и подбор оснаще
+        .col-xs-6
+          .text-block
+            .top-wrap
+              .icon
+                img(src="images/truck.jpg")
+              .title ОБОРУДОВАНИЕ ДЛЯ АВТОСЕРВИСА
+            .desc Компания «Мастер-Инструмент» предлагает своим покупателям качественное автосервисное оборудование с оптимальным соотношением цены и качества. Если вы хотите, чтобы ваш сервисный центр приносил прибыль, или же планируете расширение спектра услуг, то стоит купить оборудование для СТО именно здесь: в пользу такого решения говорит и ценовая политика компании, и условия сотрудничества, и подбор оснаще

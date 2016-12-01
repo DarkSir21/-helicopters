@@ -1,0 +1,23 @@
+{
+  "name": "coopters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-css-folder": "mkdirp static/styles",
+    "watch-sass": "npm run make-css-folder && node-sass sass/ -o static/styles -w -r --include-path",
+    "build-css": "npm run make-css-folder && node-sass sass/ -o static/styles",
+    "stylelint": "stylelint **/*.scss",
+    "pug": "pug pug/index.pug -P -o static",
+    "pug-watch": "pug pug/main.pug -P -o static -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "pug": "^2.0.0-beta6",
+    "stylelint": "^7.6.0",
+    "stylelint-config-sass-guidelines": "^1.1.0"
+  }
+}

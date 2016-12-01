@@ -1,0 +1,45 @@
+
+.input-search {
+  display: flex;
+
+  > .input {
+    border: 2px solid $light-gray;
+    border-right: none;
+    min-width: 14rem;
+    @include height-btn;
+  }
+
+  > .input.-full {
+    width: 100%;
+    border: none;
+  }
+
+  > .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-color: $brown;
+    background: transparent;
+    cursor: pointer;
+    @include height-btn;
+    padding: 0 0.675rem 0 0 ;
+  }
+
+  > .search > svg {
+    height: 100%;
+    width: auto;
+    padding: 8px;
+  }
+
+  > .search.-yellow {
+    color: $yellow-second;
+    border-color: $yellow-second;
+  }
+
+  > .search.-yellow > svg {
+    fill: #fff;
+  }
+
+}

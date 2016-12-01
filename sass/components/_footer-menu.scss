@@ -1,0 +1,49 @@
+
+.footer-menu {
+  
+  .title {
+    color: #fff;
+    margin: 3rem 0 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .list > li > a {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .list > li > a:hover {
+    text-decoration: none;
+    color: $yellow-second;
+  }
+
+  .contacts {
+    margin-bottom: 4rem;
+  }
+
+  .contacts > .name,
+  .contacts > .text {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contacts > .name {
+    color: $yellow-second;
+  }
+
+  .contacts > .text {
+    color: #fff;
+  }
+}

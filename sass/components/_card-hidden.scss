@@ -1,0 +1,73 @@
+
+.card-hidden {
+  display: block;
+  position: relative;
+  min-height: 14rem;
+
+  > .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.85rem;
+    background-color: #fff;
+  }
+
+  > .wrapper > .image {
+    display: block;
+    margin-top: 1.7rem;
+  }
+
+  > .wrapper > .image > img {
+    max-width: 100%;
+  }
+
+  > .wrapper > .title.-link {
+    display: block;
+    margin: .6rem 0;
+    text-decoration: underline;
+  }
+  
+  > .wrapper > .title.-small {
+    font-size: 0.7rem;
+  }
+
+  > .wrapper > .desc {
+    display: none;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    border-top: 1px solid $brown;
+  }
+
+  > .wrapper > .desc > .tag {
+    display: inline-block;
+    margin-right: 0.8rem;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+  
+  > .wrapper > .desc > .tag:hover {
+    color: $red;
+  }
+
+  > .wrapper:hover {
+    z-index: 10;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.32);
+  }
+
+  > .wrapper:hover  > * {
+    color: #000;
+  }
+
+  > .wrapper:hover > .title.-link {
+    color: $red;
+    text-decoration: none;
+  }
+
+  > .wrapper:hover > .desc {
+    display: block;
+  }
+
+}

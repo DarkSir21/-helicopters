@@ -1,0 +1,16 @@
+
+.second-menu {
+  > .link {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  > .link:first-child {
+    margin-left: 0;
+  }
+
+  > .link:last-child {
+    margin-right: 0;
+  }
+}

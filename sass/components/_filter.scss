@@ -1,0 +1,15 @@
+.filter {
+
+  > .title {
+    transform: translateY(100%);
+  }
+
+  > .wrapper {
+    background: $yellow;
+    padding: 5rem 0 3rem;
+  }
+
+  .btn {
+    margin-left: 2.1rem;
+  }
+}

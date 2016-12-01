@@ -1,0 +1,28 @@
+
+.text-block {
+  margin-top: 4rem;
+
+  > .top-wrap { 
+    display: flex;
+    align-items: center;
+  }
+
+  > .top-wrap > .icon {
+    display: inline-block;
+    width: 87px;
+    height: 87px;
+    margin-right: 1.2rem;
+  }
+
+  > .top-wrap > .title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.4rem;
+    max-width: 200px;
+    text-transform: uppercase;
+  }
+
+  > .desc {
+    margin-top: 1.2rem;
+  }
+}
