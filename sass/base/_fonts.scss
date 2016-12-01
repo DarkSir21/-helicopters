@@ -4,3 +4,9 @@
   font-weight: 400;
   src: url("../fonts/Intro-Bold-Caps.otf");
 }
+
+@font-face {
+  font-family: "Rubl Regular";
+  font-weight: normal;
+  src: url('../fonts/rubl-regular-webfont.woff2') format("woff2"), url('../fonts/rubl-regular-webfont.woff') format("woff");
+}

@@ -6,16 +6,23 @@
   "scripts": {
     "make-css-folder": "mkdirp static/styles",
     "watch-sass": "npm run make-css-folder && node-sass sass/ -o static/styles -w -r --include-path",
-    "build-css": "npm run make-css-folder && node-sass sass/ -o static/styles",
+    "build-css": "npm run make-css-folder && node-sass sass/ -o static/styles && npm run postcss",
     "stylelint": "stylelint **/*.scss",
     "pug": "pug pug/index.pug -P -o static",
-    "pug-watch": "pug pug/main.pug -P -o static -w"
+    "pug-watch": "pug pug/main.pug -P -o static -w",
+    "postcss": "postcss -c postcss.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^3.8.1",
     "node-sass": "^3.13.0",
+    "postcss": "^5.2.6",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-focus": "^1.0.0",
+    "postcss-inline-svg": "^2.3.0",
+    "postcss-pxtorem": "^3.3.1",
     "pug": "^2.0.0-beta6",
     "stylelint": "^7.6.0",
     "stylelint-config-sass-guidelines": "^1.1.0"

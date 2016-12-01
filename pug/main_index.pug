@@ -28,11 +28,11 @@ main
         .col-xs-4
           .aside-slider
               .btns
-                a(href="#").btn.-normal
+                a(href="#first").btn.-normal
                   .icon.-red-bg
                     include ../static/icons/percentage.svg
                   .link.-yellow-bg.-center Лидеры продаж
-                a(href="#").btn.-normal.-disabled
+                a(href="#second").btn.-normal.-disabled
                   .icon.-red-bg
                     include ../static/icons/percentage.svg
                   .link.-yellow-bg.-center Новинки
@@ -43,24 +43,40 @@ main
               .aside-slider-left
               .aside-slider-right
               .aside-slider-wrap.owl-carousel
-                .item
-                  .title SYMA X23 m<br>плати за 2 - бери 3
+                .item(data-tab="first")
+                  .title SYMA X23 m<br>плати за 2 - бери 1
                   .sub-title Акция действует с 18 октября по 31 ноября
                   .image
                     img(src="images/walli.jpg", alt="")
                     .prices
                       .sale цена <s>205 000</s>
                       .price 175 000 ₽
-                .item
-                  .title SYMA X23 m<br>плати за 2 - бери 3
+                .item(data-tab="first")
+                  .title SYMA X23 m<br>плати за 2 - бери 1
                   .sub-title Акция действует с 18 октября по 31 ноября
                   .image
                     img(src="images/walli.jpg", alt="")
                     .prices
                       .sale цена <s>205 000</s>
                       .price 175 000 ₽
-                .item
-                  .title SYMA X23 m<br>плати за 2 - бери 3
+                .item(data-tab="first")
+                  .title SYMA X23 m<br>плати за 2 - бери 1
+                  .sub-title Акция действует с 18 октября по 31 ноября
+                  .image
+                    img(src="images/walli.jpg", alt="")
+                    .prices
+                      .sale цена <s>205 000</s>
+                      .price 175 000 ₽
+                .item(data-tab="second")
+                  .title SYMA X23 m<br>плати за 2 - бери 2
+                  .sub-title Акция действует с 18 октября по 31 ноября
+                  .image
+                    img(src="images/walli.jpg", alt="")
+                    .prices
+                      .sale цена <s>205 000</s>
+                      .price 175 000 ₽
+                .item(data-tab="second")
+                  .title SYMA X23 m<br>плати за 2 - бери 2
                   .sub-title Акция действует с 18 октября по 31 ноября
                   .image
                     img(src="images/walli.jpg", alt="")
@@ -98,7 +114,7 @@ main
               option(value="0") Категория 4
           .input.-mar
             select(name="category2").select
-              option(value="0") Цена: от 0 до 254 000 ₽
+              option(value="0") Цена: от 0 до 254 000 руб.
               option(value="0") Категория 2
               option(value="0") Категория 3
               option(value="0") Категория 4

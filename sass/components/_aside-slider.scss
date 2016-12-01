@@ -24,12 +24,31 @@
     cursor: pointer;
   }
 
+  .aside-slider-left::before,
+  .aside-slider-right::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    fill: #fff;
+    background: url('../icons/next-white.svg') no-repeat center / cover;
+  }
+
   .aside-slider-left {
     left: -1.3rem;
   }
 
+  .aside-slider-left::before {
+    transform: rotateZ(90deg)
+  }
+
   .aside-slider-right {
     right: -1.3rem;
+  }
+  .aside-slider-right::before {
+    transform: rotateZ(-90deg)
   }
 }
 
