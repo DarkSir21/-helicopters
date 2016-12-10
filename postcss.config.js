@@ -1,18 +1,19 @@
 module.exports = {
-  'use': ['postcss-cssnext', 'postcss-focus', 'postcss-pxtorem', 'postcss-inline-svg', 'cssnano'],
+  'use': ['postcss-cssnext', 'postcss-focus', 'postcss-inline-svg', 'cssnano'],
   'input': './static/styles/main.css',
   'output': './static/styles/main.css',
   'local-plugins': true,
   'cssnano': {
     'discardComments': {
       'removeAll': true
-    }
+    },
+    'zindex': false
   },
-  'postcss-pxtorem': {
+  /*'postcss-pxtorem': {
     'rootValue': 14,
     'replace': false,
     'selectorBlackList': ['body', 'html']
-  },
+  },*/
   /*'postcss-sprites': {
     'stylesheetPath': './dist/css',
     'spritePath': './dist/css/sprites',

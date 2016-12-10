@@ -8,9 +8,10 @@
     "watch-sass": "npm run make-css-folder && node-sass sass/ -o static/styles -w -r --include-path",
     "build-css": "npm run make-css-folder && node-sass sass/ -o static/styles && npm run postcss",
     "stylelint": "stylelint **/*.scss",
-    "pug": "pug pug/index.pug -P -o static",
+    "pug": "pug pug/main.pug -P -o static",
     "pug-watch": "pug pug/main.pug -P -o static -w",
-    "postcss": "postcss -c postcss.config.js"
+    "postcss": "postcss -c postcss.config.js",
+    "build": "npm run pug && npm run build-css"
   },
   "keywords": [],
   "author": "",
