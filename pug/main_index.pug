@@ -113,11 +113,16 @@ main
               option(value="0") Категория 3
               option(value="0") Категория 4
           .input.-mar
-            select(name="category2").select
-              option(value="0") Цена: от 0 до 254 000 руб.
-              option(value="0") Категория 2
-              option(value="0") Категория 3
-              option(value="0") Категория 4
+            .slider 
+              label
+                | Цена: от
+                input.slider-min-val(type="text" value="0" size="1")
+              label
+                | до
+                input.slider-max-val(type="text" value="254 000" size="7")
+                | руб.
+              .slider-price-wrap
+                .slider-price
           .input.-mar
             select(name="category3").select
               option(value="0") Профессиональный

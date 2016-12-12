@@ -55,19 +55,92 @@ $(document).ready(function() {
 
 
   function setTab(i) {
-  
-  var index = i + 1;
+    var index = i + 1;
 
-  var $element = $('.owl-stage').children('.owl-item:nth-child(' + index + ')');
+    var $element = $('.owl-stage').children('.owl-item:nth-child(' + index + ')');
 
-  var text = $element.children('.item').attr('data-tab');
-  text = '#' + text;
-  console.log($tabs);
-  $tabs.each(function(i, el) {
-    $(el).addClass('-disabled');
-    if( $(el).attr('href') === text ) {
-      $(el).removeClass('-disabled');
+    var text = $element.children('.item').attr('data-tab');
+    text = '#' + text;
+    console.log($tabs);
+    $tabs.each(function(i, el) {
+      $(el).addClass('-disabled');
+      if( $(el).attr('href') === text ) {
+        $(el).removeClass('-disabled');
+      }
+    });
+  }
+
+  var sliderPrice = $('.slider-price');
+
+  sliderPrice.slider({
+    range: true,
+    min: 0,
+    max: 255000,
+    values: [0, 255000],
+    slide: function(e, ui) {
+      $('.slider-min-val').val( ui.values[0] );
+      $('.slider-max-val').val( ui.values[1] );
+      $('.slider-min-val, .slider-max-val').trigger('keyup');
     }
   });
-}
+
+  
+
+  $('.slider-min-val, .slider-max-val')
+    .numeric()
+    .on('keyup', changeSizeInput)
+    .on('change', changeSizeInput)
+    .on('keyup', changeSlider)
+    .on('keyup', checkMaxMin)
+    .on('change', checkMaxMin)
+
+    function checkMaxMin() {
+      
+      var val = $(this).val(),
+          max = sliderPrice.slider( 'option', 'max' ),
+          min = sliderPrice.slider( 'option', 'min' );
+      val = val ? val : 0;
+      if( val >= max ) $(this).val(max);
+      if( val <= min ) $(this).val(min);
+
+    }
+
+  function changeSlider() {
+    sliderPrice.slider('values', [
+      $('.slider-min-val').val(),
+      $('.slider-max-val').val()
+    ]);
+  }
+
+  function changeSizeInput() {
+    var val = $(this).val();
+
+    $(this).attr('size', val.length);
+  }
+
+  $('.input .slider').on('click', function(e) {
+    var sliderPriceWrap = $(this)[0],
+        wrap = $(this).find('.slider-price-wrap');
+    wrap.addClass('-visable');
+
+    $(window).on('click', hideSlidePrice);
+
+    function hideSlidePrice(e) {
+      var target = e.target,
+          disabled = true;
+      while( target !== document ) {
+        if( target === sliderPriceWrap ) {
+          disabled = false;
+        }
+        target = target.parentNode;
+      }
+
+      if(disabled) {
+        wrap.removeClass('-visable');
+        $(window).off('click', hideSlidePrice);
+      }
+    } 
+
+  });
+
 });
