@@ -17,6 +17,7 @@
     border-right: 2px solid $brown;
     width: 10rem;
     background-color: #fff;
+    color: #000;
   }
 
   > .link:last-child {
@@ -27,6 +28,52 @@
   > .link:focus {
     color: #fff;
     background-color: $brown;
+  }
+
+  > .catalog {
+    cursor: pointer;
+    position: relative;
+  }
+
+  > .catalog > .wrapper {
+    position: absolute;
+    width: 800px;
+    display: none;
+    flex-wrap: wrap;
+    background: #fff;
+    z-index: 100000;
+    left: 0;
+    bottom: 0px;
+    transform: translateY(100%);
+    box-shadow: 0 13px 20px rgba(0, 0, 0, .14);
+    padding: 10px 0;
+  }
+
+  > .catalog > .wrapper > .item {
+    width: 25%;
+    padding: 14px;
+    text-align: center;
+  }
+
+  > .catalog > .wrapper > .item > .title {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: none;
+  }
+
+  > .catalog > .wrapper > .item > .image {
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  > .catalog > .wrapper > .item > .image > img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  > .catalog:hover > .wrapper {
+    display: flex;
   }
 
 }

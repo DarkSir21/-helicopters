@@ -34,7 +34,15 @@ header.wrap
 
       .top-bar-second
         nav.main-menu
-          a(href="#").link Каталог
+          .link.catalog Каталог
+            .wrapper
+              - var n = 0;
+                while n < 12
+                  a(href="#").item
+                    .image
+                      img(src="images/helic.jpg")
+                    .title Квадрокоптеры
+                  - n++
           a(href="#").link Сравнение
           a(href="#").link Отзывы
         

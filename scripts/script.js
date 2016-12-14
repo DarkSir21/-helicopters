@@ -75,8 +75,8 @@ $(document).ready(function() {
   sliderPrice.slider({
     range: true,
     min: 0,
-    max: 255000,
-    values: [0, 255000],
+    max: +$('.slider-max-val').val(),
+    values: [0, +$('.slider-max-val').val()],
     slide: function(e, ui) {
       $('.slider-min-val').val( ui.values[0] );
       $('.slider-max-val').val( ui.values[1] );
@@ -88,11 +88,11 @@ $(document).ready(function() {
 
   $('.slider-min-val, .slider-max-val')
     .numeric()
-    .on('keyup', changeSizeInput)
-    .on('change', changeSizeInput)
     .on('keyup', changeSlider)
     .on('keyup', checkMaxMin)
     .on('change', checkMaxMin)
+    // .on('keyup', changeSizeInput)
+    // .on('change', changeSizeInput)
 
     function checkMaxMin() {
       
@@ -142,5 +142,15 @@ $(document).ready(function() {
     } 
 
   });
+
+  $('.js-home-filter').on('click', function(){
+    var url = '';
+    url += $('.js-home-cat').val() + '?';
+    url += 'price_min=' + $('.slider-min-val').val() + '&';
+    url += 'price_max=' + $('.slider-max-val').val() + '&';
+    // url += 'stock=' + $('.js-home-check-stock').val() + '&';
+
+    location = url;
+  })
 
 });
